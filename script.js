@@ -60,7 +60,9 @@ let space = distance(coordinates.dot.x, coordinates.dot.y, coordinates.cursor.x,
 if(space<=0){
     place.style.backgroundColor = "#ff0000";
     console.log('haha');
-    myDot.innerHTML = `<img src="icons8-flame-96.png">`;
+    myDot.innerHTML = `<img id="flame" src="icons8-flame-96.png">`;
+    let fire = document.getElementById("flame");
+    fire.style.gridArea = myDot.style.gridArea;
 }
 else if(space>0 && space<2){
     place.style.backgroundColor = "#ff5e00";

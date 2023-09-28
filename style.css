@@ -1,5 +1,9 @@
+
 body{
     margin: 0dvh;
+    height: 100%;
+    overflow: hidden;
+    
 }
 #myGrid {
     display: grid;
