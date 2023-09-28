@@ -55,11 +55,12 @@ function init(){
 
 function myColor(){
 let place = document.getElementById("place1");
+let myDot = document.getElementById("myDot");
 let space = distance(coordinates.dot.x, coordinates.dot.y, coordinates.cursor.x, coordinates.cursor.y);
 if(space<=0){
     place.style.backgroundColor = "#ff0000";
     console.log('haha');
-    place.innerHTML = `<img src="icons8-flame-96.png">`;
+    myDot.innerHTML = `<img src="icons8-flame-96.png">`;
 }
 else if(space>0 && space<2){
     place.style.backgroundColor = "#ff5e00";
