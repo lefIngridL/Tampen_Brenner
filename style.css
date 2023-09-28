@@ -22,15 +22,21 @@ body{
 
 #myDot{
     grid-area: unset;
+    height: 5dvh;
+    width: 5dvw;
+    cursor:crosshair;
     
     
 }
 
 #place1{
-height: 10dvh;
-width: 10dvh;
+height: 100dvh;
+width: 100dvw;
 position: absolute;
 z-index: -1;
+}
+#btn{
+    position: absolute;
 }
 
 .red {

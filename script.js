@@ -16,7 +16,10 @@ updateView();
 function updateView(){
     
     html = /*html*/ `
-    <div id="place1" >Rød</div>
+    <input id="btn" type="button" value="reset Game" onclick="reset()"/>
+    <div id="place1" >Rød
+    
+    </div>
     <div id="myGrid">
     </div>
     <div id="dotGrid">
@@ -52,18 +55,20 @@ function init(){
     firstDot.style.gridArea = newArea;
     
 }
-
+let space;
 function myColor(){
 let place = document.getElementById("place1");
+let pointGrid = document.getElementById("myGrid");
 let myDot = document.getElementById("myDot");
-let space = distance(coordinates.dot.x, coordinates.dot.y, coordinates.cursor.x, coordinates.cursor.y);
+space = distance(coordinates.dot.x, coordinates.dot.y, coordinates.cursor.x, coordinates.cursor.y);
 if(space<=0){
     place.style.backgroundColor = "#ff0000";
     console.log('haha');
-    myDot.innerHTML = `<img id="flame" src="icons8-flame-96.png">`;
-    let fire = document.getElementById("flame");
-    fire.style.gridArea = myDot.style.gridArea;
-}
+    pointGrid.innerHTML = `<img id="flame" src="icons8-flame-96.png">`;
+        let fire = document.getElementById("flame");
+        fire.style.gridArea = myDot.style.gridArea;
+    }
+
 else if(space>0 && space<2){
     place.style.backgroundColor = "#ff5e00";
 }
@@ -107,6 +112,8 @@ else if(space>=40){
 
 }
 
+
+
 function comparePlace(){
     let place = document.getElementById("place1");
     //console.log(coordinates.cursor);
@@ -146,4 +153,8 @@ function divGen(){
             document.getElementById("myGrid").innerHTML += `<div id="${j}/${i}" onmousemove="myColor(); logCo(${j}, ${i}); comparePlace()"></div>`;
         }j++
     }
+}
+
+function reset(){
+    location.reload();
 }
