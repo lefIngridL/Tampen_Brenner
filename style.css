@@ -1,0 +1,43 @@
+body{
+    margin: 0dvh;
+}
+#myGrid {
+    display: grid;
+    grid-template-columns: repeat(42, 5dvh);
+    grid-template-rows: repeat(20, 5dvh);
+    
+}
+#dotGrid {
+    display: grid;
+    grid-template-columns: repeat(42, 5dvh);
+    grid-template-rows: repeat(20, 5dvh);
+    position: relative;
+    bottom: 100dvh;
+    z-index: -1;
+}
+
+#myDot{
+    grid-area: unset;
+    
+    
+}
+
+#place1{
+height: 10dvh;
+width: 10dvh;
+position: absolute;
+z-index: -1;
+}
+
+.red {
+    background-color: #BA0C2F;
+    background-color: #00ff0d;
+
+}
+
+.blue {
+    background-color: #00205B;
+}
+.green {
+    background-color: #085b00;
+}
